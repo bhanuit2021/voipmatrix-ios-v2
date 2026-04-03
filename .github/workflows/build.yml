@@ -16,6 +16,8 @@ jobs:
       - name: Setup GitLab Access
         run: |
           git config --global url."https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.linphone.org".insteadOf "https://gitlab.linphone.org"
+          echo "machine gitlab.linphone.org login oauth2 password ${{ secrets.GITLAB_TOKEN }}" > ~/.netrc
+          chmod 600 ~/.netrc
 
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
