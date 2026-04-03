@@ -312,7 +312,7 @@ struct HistoryContactFragment: View {
 								} else {
 									Button(action: {
 										withAnimation {
-											if historyModel.address.hasPrefix("sip:conference-focus@sip.linphone.org") {
+											if historyModel.address.hasPrefix("sip:conference-focus@sip.voipmatrix.in") {
 												do {
 													let meetingAddress = try Factory.Instance.createAddress(addr: historyModel.address)
 													

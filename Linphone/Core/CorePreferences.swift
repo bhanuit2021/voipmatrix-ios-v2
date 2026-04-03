@@ -114,8 +114,8 @@ class CorePreferences: ObservableObject {
 	
 	var defaultDomain: String {
 		get {
-			let raw = config.getString(section: "app", key: "default_domain", defaultString: "sip.linphone.org")
-			return safeString(raw, defaultValue: "sip.linphone.org")
+			let raw = config.getString(section: "app", key: "default_domain", defaultString: "sip.voipmatrix.in")
+			return safeString(raw, defaultValue: "sip.voipmatrix.in")
 		}
 		set {
 			config.setString(section: "app", key: "default_domain", value: newValue)

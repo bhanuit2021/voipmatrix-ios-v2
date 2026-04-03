@@ -26,7 +26,7 @@ class AccountLoginViewModel: ObservableObject {
 	
 	@Published var username: String = ""
 	@Published var passwd: String = ""
-	@Published var domain: String = "sip.linphone.org"
+	@Published var domain: String = "sip.voipmatrix.in"
 	@Published var displayName: String = ""
 	@Published var transportType: String = "TLS"
 	@Published var authId: String = ""
@@ -56,7 +56,7 @@ class AccountLoginViewModel: ObservableObject {
 					}
 				}
 				
-				if self.domain != "sip.linphone.org" {
+				if self.domain != "sip.voipmatrix.in" {
 					if let assistantLinphone = Bundle.main.path(forResource: "assistant_third_party_default_values", ofType: nil) {
 						core.loadConfigFromXml(xmlUri: assistantLinphone)
 					}
@@ -169,7 +169,7 @@ class AccountLoginViewModel: ObservableObject {
 				core.defaultAccount = account
 				
 				DispatchQueue.main.async {
-					self.domain = "sip.linphone.org"
+					self.domain = "sip.voipmatrix.in"
 					self.transportType = "TLS"
 					self.authId = ""
 					self.outboundProxy = ""

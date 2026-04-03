@@ -113,7 +113,7 @@
 			<string>com.voipmatrix.ios</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>org.linphone</string>
+				<string>com.voipmatrix.ios</string>
 			</array>
 		</dict>
 		<dict>

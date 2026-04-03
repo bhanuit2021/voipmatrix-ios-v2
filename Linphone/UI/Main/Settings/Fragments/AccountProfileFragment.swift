@@ -629,7 +629,7 @@ struct AccountProfileFragment: View {
 					let textPart = components.dropLast().joined(separator: " ")
 					
 					let contentPopup1 = Text(textPart + " ")
-					let contentPopup2 = Text("[https://sip.linphone.org](https://sip.linphone.org)").underline()
+					let contentPopup2 = Text("[https://sip.voipmatrix.in](https://sip.voipmatrix.in)").underline()
 					
 					PopupView(
 						isShowPopup: $isShowLogoutPopup,

@@ -25,7 +25,7 @@ struct SplashScreen: View {
 			Color.white
 				.ignoresSafeArea()
 			
-			Image("linphone")
+			Image("voipmatrix")
 				.resizable()
 				.renderingMode(.template)
 				.aspectRatio(contentMode: .fit)
