@@ -57,6 +57,11 @@ jobs:
             -workspace LinphoneApp.xcodeproj/project.xcworkspace \
             -scheme Linphone
 
+      - name: Fix Export Compliance
+        run: |
+          /usr/libexec/PlistBuddy -c "Delete :ITSEncryptionExportComplianceCode" Linphone/Info.plist 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Add :ITSAppUsesNonExemptEncryption bool false" Linphone/Info.plist 2>/dev/null || true
+
       - name: Build & Archive
         run: |
           xcodebuild archive \
